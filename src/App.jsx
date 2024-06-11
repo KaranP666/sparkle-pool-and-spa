@@ -13,7 +13,7 @@ function App() {
     <BrowserRouter>
     <Home/>
     <AboutUs/>
-    <ServiceReq />
+    {/* <ServiceReq /> */}
     <Feedback/>
     <Routes>
       <Route path="#service-request" />
