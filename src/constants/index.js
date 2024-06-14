@@ -1,25 +1,24 @@
 import customer1 from '../assets/images/customer1.jpeg'
 import customer2 from '../assets/images/customer1.jpeg'
   
-  export const navLinks = [
-    { href: "#home", label: "Home" },
-    { href: "#about-us", label: "About Us" },
-    { href: "#feedback", label: "Feedback" },
-    { href: "#service-request", label: "Service Request" },
+export const navLinks = [
+  { label: 'Home', href: '/#home' },
+  { label: 'About Us', href: '/#about-us' },
+  { label: 'Feedback', href: '/#feedback' },
+  { label: 'Service Request', href: '/service-request' },
 ];
-
 
 export const reviews = [
   {
       imgURL: customer1,
-      customerName: 'Bill Gates',
+      customerName: 'Vincent W.',
       rating: 4.5,
-      feedback: "The attention to detail and the quality of the product exceeded my expectations. Highly recommended!"
+      feedback: "I had an emergency equipment repair need. I reached out to Sparkle Pool, as they're local and had great ratings. They were responsive to my need and delivered and installed the equipment the next business day! Great work; very satisfied."
   },
   {
       imgURL: customer2,
-      customerName: 'Bill Gates',
-      rating: 4.5,
-      feedback: "The product not only met but exceeded my expectations. I'll definitely be a returning customer!"
+      customerName: 'R S.',
+      rating: 4.8,
+      feedback: "John at Sparkle Pool exceeded my expectations by quickly resolving my pool pump emergency with exceptional friendliness and expertise, getting a new pump installed in just 5 days despite a two-day delay from an existing electrical issue. Highly recommend his prompt and professional service!"
   }
 ];
