@@ -1,5 +1,5 @@
-import customer1 from '../assets/images/customer1.jpeg'
-import customer2 from '../assets/images/customer1.jpeg'
+import customer1 from '../assets/images/Customer1.png'
+import customer2 from '../assets/images/Customer2.png'
   
 export const navLinks = [
   { label: 'Home', href: '/#home' },
