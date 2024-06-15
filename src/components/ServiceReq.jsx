@@ -12,7 +12,7 @@ const ServiceReq = () => {
       </div>
       <div className="w-full max-w-2xl bg-white rounded-lg p-8 mt-8">
         <p className="mb-4">
-          Whether you're a current weekly customer and need additional assistance with your pool and spa needs, or if you're not a current customer and would like to have your pool and spa equipment repaired, H & H would love to help.
+          Whether you're a current weekly customer and need additional assistance with your pool and spa needs, or if you're not a current customer and would like to have your pool and spa equipment repaired, Sparkle would love to help.
         </p>
         <p className="mb-4 text-sm text-gray-600">
           Please use the form below to submit your repair appointment request and we will reach out to you within two business days.

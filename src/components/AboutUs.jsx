@@ -17,11 +17,11 @@ const Card = ({ image, title, description, buttonText, buttonLink }) => (
 
 const AboutUs = () => {
   return (
-    <div id="about-us" className="flex justify-center">
+    <div id="about-us" className="flex justify-center mt-0">
       <div className="relative w-[1300px]">
         <div className="relative pt-28 text-center">
           <h2 className="block antialiased tracking-normal font-sans leading-[1.3] text-black mb-4 text-[40px] font-semibold lg:text-[50px]">
-            About us
+            About Us
           </h2>
           <p className="block antialiased font-sans text-xl font-normal leading-relaxed text-black mb-5 opacity-70">
             Welcome to Sparkle Pool and Spa, your trusted partner in pool and
