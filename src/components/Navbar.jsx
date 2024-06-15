@@ -1,21 +1,36 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
 import { navLinks } from '../constants';
 import hamburger from '../assets/icons/hamburger.svg';
 import { useLocation } from 'react-router-dom';
+import { gsap } from 'gsap';
 
 const Navbar = () => {
   const location = useLocation();
   const isServiceRequest = location.pathname === '/service-request';
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navRef = useRef(null);
+  const menuRef = useRef(null);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  useEffect(() => {
+    const navAnimation = gsap.fromTo(navRef.current, { opacity: 0, y: -50 }, { opacity: 1, y: 0, duration: 1 });
+    
+    if (isMenuOpen) {
+      gsap.fromTo(menuRef.current, { opacity: 0, y: -20 }, { opacity: 1, y: 0, duration: 0.5 });
+    }
+
+    return () => {
+      navAnimation.kill();
+    };
+  }, [isMenuOpen]);
+
   return (
     <header className='padding-x py-8 absolute z-10 w-full'>
-      <nav className='flex justify-between items-center max-container'>
+      <nav ref={navRef} className='flex justify-between items-center max-container'>
         <Link smooth to='/#'>
           {/* <img src={headerLogo} alt="logo" width={130} height={29} /> */}
         </Link>
@@ -45,7 +60,7 @@ const Navbar = () => {
       </nav>
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <ul className="absolute top-full left-0 w-full bg-white shadow-lg flex flex-col items-start p-4">
+        <ul ref={menuRef} className="absolute top-full left-0 w-full bg-white shadow-lg flex flex-col items-start p-4">
           {
             navLinks.map((item) => (
               <li key={item.label} className="w-full">
